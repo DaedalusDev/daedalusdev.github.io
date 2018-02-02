@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+title: Daedalus's dev home page
+description: Welcome to Flûte Corp.
+github:
+  repository_url: http://daedalusdev.github.com
