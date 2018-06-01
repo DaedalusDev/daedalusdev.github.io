@@ -1,5 +1,35 @@
-theme: jekyll-theme-cayman
-title: Daedalus's dev home page
-description: Welcome to Flûte Corp.
+title: Daedalus's dev
+description: Bienvenue chez Flûte Corp. !
 github:
-  repository_url: http://daedalusdev.github.com
+  repository_url: https://daedalusdev.github.io
+projects:
+  bar_js:
+    name: Bar.js
+    url: https://github.com/DaedalusDev/bar.js
+    description: Partagez efficacement l'addition avec vos amis !
+    img: http://bar.nexk.fr/src/img/favicon/bar.svg
+  bar_php:
+    name: Bar.php
+    url: https://github.com/DaedalusDev/bar.php
+    description: Profitez d'une solide API REST pour gérer vos articles Bar.js
+    img: http://bar.nexk.fr/src/img/favicon/bar.svg
+  flux_manager:
+    name: FluxManager
+    url: https://github.com/DaedalusDev/FluxManager
+    description: Administrez et visualisez le flux de donnée de votre application.
+  flux_manager_api:
+    name: FluxManagerApi
+    url: https://github.com/DaedalusDev/FluxManagerApi
+    description: Api de mise en persistance des information de FluxManager
+  capeloi:
+    name: Capeloï
+    url: https://github.com/DaedalusDev/capeloi
+    description: Application "clé en main" pour une gestion de stock efficace
+  magasin_vue:
+    name: Magasin.vue
+    url: https://github.com/DaedalusDev/Magasin.vue
+    description: Application "clé en main" pour gérer une boutique
+
+
+
+
