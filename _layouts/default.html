@@ -38,14 +38,14 @@
             <img class="activator" style="height: 250px; width: auto; margin: auto;" src="{{ project.img | default: 'https://materializecss.com/images/office.jpg'}}">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{ project.title }}<i class="material-icons right">more_vert</i></span>
+            <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i class="material-icons right">more_vert</i></span>
             <p class="truncate"><a href="#">{{ project.description }}</a></p>
           </div>
             <div class="card-action right-align">
               <a href="{{ project.url }}">Repository</a>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{ project.title }}<i class="material-icons right">close</i></span>
+              <span class="card-title grey-text text-darken-4">{{ project.name }}<i class="material-icons right">close</i></span>
               <p>{{ project.long_description | default: project.description }}</p>
             </div>
         </div>
@@ -93,7 +93,7 @@
         <h5 class="white-text">Projects</h5>
         <ul>
           {% for project in site.projects %}
-          <li><a class="white-text" href="{{ project.url }}">{{ project.title }}</a></li>
+          <li><a class="white-text" href="{{ project.url }}">{{ project.name }}</a></li>
           {% endfor %}
         </ul>
       </div>
