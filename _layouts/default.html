@@ -42,11 +42,12 @@
             <p class="truncate"><a href="#">{{ project.description }}</a></p>
           </div>
             <div class="card-action right-align">
-              <a href="{{ project.url }}">Repository</a>
+              {% if project.url_demo != blank %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}}
+              <a target="_blank" href="{{ project.url }}">Github</a>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">{{ project.name }}<i class="material-icons right">close</i></span>
-              <p>{{ project.long_description | default: project.description }}</p>
+              <p>{{ project.short_description | default: project.description }}</p>
             </div>
         </div>
       </div>
@@ -63,7 +64,7 @@
       <div class="col l6 s12">
         <h5 class="white-text">Bio</h5>
         <p class="grey-text text-lighten-4">
-          Je suis un développeur Français, principalement pationné par les technologies Front Web.<br/>
+          Je suis un développeur Français, principalement passioné par les technologies Front Web.<br/>
         </p>
 
 
