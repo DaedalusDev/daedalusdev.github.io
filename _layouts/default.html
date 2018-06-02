@@ -35,20 +35,30 @@
       <div class="col s12 m4">
         <div class="card sticky-action">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" style="height: 250px; width: auto; margin: auto;" src="{{ project.img | default: 'https://materializecss.com/images/office.jpg'}}">
+            <img class="activator" style="height: 250px; width: auto; margin: auto;" src="{{ project.img }}">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i class="material-icons right">more_vert</i></span>
-            <p class="truncate">{{ project.description }}</p>
+            <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i
+                class="material-icons right">more_vert</i></span>
+            <p class="truncate"> {{ project.description }}</p>
           </div>
-            <div class="card-action right-align">
-              {% if project.url_demo %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}
-              <a target="_blank" href="{{ project.url }}">Github</a>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{ project.name }}<i class="material-icons right">close</i></span>
-              <p>{{ project.short_description | default: project.description }}</p>
-            </div>
+          <div class="card-action right-align">
+            {% if project.url_demo %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}
+            <a target="_blank" href="{{ project.url }}">Github</a>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">{{ project.name }}<i class="material-icons right">close</i></span>
+            <p>{{ project.short_description | default: project.description }}
+              {% if project.techno %}
+              <h5>Languages et techno</h5>
+              <ul>
+                {% for techno in project.techno %}
+                <li>{{ techno }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </p>
+          </div>
         </div>
       </div>
       {% endfor %}
@@ -64,10 +74,9 @@
       <div class="col l6 s12">
         <h5 class="white-text">Bio</h5>
         <p class="grey-text text-lighten-4">
-          Je suis un développeur Français, principalement passioné par les technologies Front Web.<br/>
+          Je suis un développeur Français, principalement passionné par les technologies Front Web.<br/>
+          Je vous propose ici quelques projets totalement libre (MIT).<br/>
         </p>
-
-
       </div>
       <div class="col l3 s12">
         <h5 class="white-text">Languages et techno</h5>
@@ -115,7 +124,7 @@
 (function ($) {
   $(function () {
 
-    M.AutoInit();
+    M.AutoInit()
 
   }) // end of document ready
 })(jQuery) // end of jQuery name space

@@ -6,30 +6,41 @@ projects:
   - name: Bar.js
     url: https://github.com/DaedalusDev/bar.js
     url_demo: https://bar.nexk.fr/
-    short_description:
+    short_description: WebApp de partage de l'apéro
     description: Partagez efficacement l'addition avec vos amis !
     img: /assets/img/bar.svg
+    techno: [Javascript, jQuery]
   - name: Bar.php
     url: https://github.com/DaedalusDev/bar.php
     url_demo: https://bar.nexk.fr/
+    short_description: API pour Bar.js
     description: Profitez d'une solide API REST pour gérer vos articles Bar.js
     img: /assets/img/bar_api.svg
-  - name: FluxManager
-    url: https://github.com/DaedalusDev/FluxManager
-    description: Administrez et visualisez le flux de donnée de votre application.
-    img: /assets/img/flux_manager.svg
-  - name: FluxManagerApi
-    url: https://github.com/DaedalusDev/FluxManagerApi
-    description: Api de mise en persistance des information de FluxManager
-    img: /assets/img/flux_manager_api.svg
+    techno: [PHP, Symfony]
   - name: Capeloï
     url: https://github.com/DaedalusDev/capeloi
+    short_description: Application de gestion de stock
     description: Application "clé en main" pour une gestion de stock efficace
     img: /assets/img/capeloi.svg
+    techno: [Vue.js, PHP, Symfony]
+  - name: FluxManager
+    url: https://github.com/DaedalusDev/FluxManager
+    short_description: Gestionnaire de mapping
+    description: Administrez et visualisez le mapping et les flux de données de votre application.
+    img: /assets/img/flux_manager.svg
+    techno: [Vue.js]
+  - name: FluxManagerApi
+    url: https://github.com/DaedalusDev/FluxManagerApi
+    short_description: API pour FluxManager
+    description: Api de mise en persistance des information de FluxManager
+    img: /assets/img/flux_manager_api.svg
+    techno: [PHP, Symfony]
   - name: Magasin.vue
     url: https://github.com/DaedalusDev/Magasin.vue
-    description: Application "clé en main" pour gérer une boutique
+    short_description: App type boutique
+    description: Application "clé en main" pour créer et gérer une boutique
     img: /assets/img/magasin.vue.svg
+    techno: [Vue.js, PHP, Symfony]
 
 
 
