@@ -39,10 +39,10 @@
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i class="material-icons right">more_vert</i></span>
-            <p class="truncate"><a href="#">{{ project.description }}</a></p>
+            <p class="truncate">{{ project.description }}</p>
           </div>
             <div class="card-action right-align">
-              {% if project.url_demo != blank %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}}
+              {% if project.url_demo %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}
               <a target="_blank" href="{{ project.url }}">Github</a>
             </div>
             <div class="card-reveal">

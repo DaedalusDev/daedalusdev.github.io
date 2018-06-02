@@ -8,12 +8,12 @@ projects:
     url_demo: https://bar.nexk.fr/
     short_description:
     description: Partagez efficacement l'addition avec vos amis !
-    img: http://bar.nexk.fr/src/img/favicon/bar.svg
+    img: /assets/img/bar.svg
   - name: Bar.php
     url: https://github.com/DaedalusDev/bar.php
     url_demo: https://bar.nexk.fr/
     description: Profitez d'une solide API REST pour gérer vos articles Bar.js
-    img: http://bar.nexk.fr/src/img/favicon/bar.svg
+    img: /assets/img/bar_api.svg
   - name: FluxManager
     url: https://github.com/DaedalusDev/FluxManager
     description: Administrez et visualisez le flux de donnée de votre application.
