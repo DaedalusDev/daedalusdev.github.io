@@ -40,7 +40,7 @@
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i
                 class="material-icons right">more_vert</i></span>
-            <p class="truncate"> {{ project.description }}</p>
+            <p class="truncate">{{ project.short_description | default: project.description }}</p>
           </div>
           <div class="card-action right-align">
             {% if project.url_demo %}<a target="_blank" href="{{ project.url_demo }}">Demo</a>{% endif %}
@@ -48,7 +48,7 @@
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">{{ project.name }}<i class="material-icons right">close</i></span>
-            <p>{{ project.short_description | default: project.description }}
+            <p>{{ project.description }}
               {% if project.techno %}
               <h5>Languages et techno</h5>
               <ul>
