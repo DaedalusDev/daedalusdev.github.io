@@ -1,0 +1,38 @@
+<div class="row">
+  {% for project in site.data.projects %}
+  <div class="col s12 m4">
+    <div class="card sticky-action">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" style="height: 250px; width: auto; margin: auto;" src="{{ project.img }}"
+             alt="{{ project.name }}">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{ project.name }}<i
+          class="material-icons right">more_vert</i></span>
+        <p class="truncate">{{ project.description[page.lang].short_description | default:
+          project.description.fr.short_description }}</p>
+      </div>
+      <div class="card-action right-align">&nbsp;
+        {% for link in project.links %}
+        <a target="_blank" href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">
+          {{ project.name }}
+          <i class="material-icons right">close</i>
+        </span>
+        <div>
+          {{ project.description[page.lang].description | default: project.description.fr.description }}
+          <h5>Languages & frameworks</h5>
+          <ul>
+            {% for techno in project.techno %}
+            <li>{{ techno }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

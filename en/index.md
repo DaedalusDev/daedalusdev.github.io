@@ -1,5 +1,5 @@
 ---
 layout: default
-lang: fr
+lang: en
 ---
 {% include pages/projects.html %}

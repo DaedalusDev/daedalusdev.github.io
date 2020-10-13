@@ -1,0 +1,103 @@
+-   name: Bar.js
+    img: /assets/img/bar.svg
+    techno: [ Javascript, jQuery ]
+    links:
+        -   url: https://github.com/DaedalusDev/bar.js
+            label: Github
+        -   url: https://bar.nexk.fr/
+            label: Demo
+    description:
+        fr:
+            short_description: API pour Bar.js
+            description: Profitez d'une solide API REST pour gérer vos articles Bar.js
+        en:
+            short_description: WebApp to share the bill
+            description: Share the bill with your friends !
+
+-   name: Bar.php
+    img: /assets/img/bar_api.svg
+    techno: [ PHP, Symfony ]
+    links:
+        -   url: https://github.com/DaedalusDev/bar.php
+            label: Github
+        -   url: https://bar.nexk.fr/
+            label: Demo
+    description:
+        fr:
+            short_description: API pour Bar.js
+            description: Profitez d'une solide API REST pour gérer vos articles Bar.js
+        en:
+            short_description: API for Bar.js
+            description: Strong API RESTfull to manage Bar.js's articles
+
+-   name: Capeloï
+    img: /assets/img/capeloi.svg
+    techno: [ Vue.js, PHP, Symfony ]
+    links:
+        -   url: https://github.com/DaedalusDev/capeloi
+            label: Github
+    description:
+        fr:
+            short_description: Application de gestion de stock
+            description: Application "clé en main" pour une gestion de stock efficace
+        en:
+            short_description: WebApp to manage logistic
+            description: WebApp "out of the box" to manage your logistic
+
+-   name: FluxManager
+    img: /assets/img/flux_manager.svg
+    techno: [ Vue.js ]
+    links:
+        -   url: https://github.com/DaedalusDev/FluxManager
+            label: Github
+    description:
+        fr:
+            short_description: Gestionnaire de mapping
+            description: Administrez et visualisez le mapping et les flux de données de votre application.
+        en:
+            short_description: Mapping manager
+            description: Edit and visualize your application data mapping.
+
+-   name: FluxManagerApi
+    img: /assets/img/flux_manager_api.svg
+    techno: [ PHP, Symfony ]
+    links:
+        -   url: https://github.com/DaedalusDev/FluxManagerApi
+            label: Github
+    description:
+        fr:
+            short_description: API pour FluxManager
+            description: Api de mise en persistance des information de FluxManager
+        en:
+            short_description: RestFull API for FluxManager
+            description: RestFull API to persist data managed by FluxManager
+
+-   name: Magasin.vue
+    img: /assets/img/magasin.vue.svg
+    techno: [ Vue.js, PHP, Symfony ]
+    links:
+        -   url: https://github.com/DaedalusDev/Magasin.vue
+            label: Github
+    description:
+        fr:
+            short_description: App type boutique
+            description: Application "clé en main" pour créer et gérer une boutique
+        en:
+            short_description: PWA to manage logistic
+            description: PWA "out of the box" to manage your logistic
+
+-   name: Lotomatic
+    img: /assets/img/lotomatic.svg
+    techno: [ Vue.js, Quasar ]
+    links:
+        -   url: 'lotomatic'
+            label: Infos
+        -   url: ''
+            label: Play Store
+    description:
+        fr:
+            short_description: Gestion des cartons de loto
+            description: Application de gestion des cartons de loto
+        en:
+            short_description: Manager for lotto cards
+            description: App to manage lotto cards
