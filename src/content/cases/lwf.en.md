@@ -9,7 +9,7 @@ stack: ["Symfony", "API Platform", "PostgreSQL", "Vue 3", "Quasar", "TypeScript"
 ---
 **The challenge.** Growing several products and their technical foundation with a small team: the engineering team went from 2 to 5 people, the company from 4 to 12.
 
-**What I carried**
+**What I drove**
 
 - **A shared foundation instead of one product per client.** SEKUR (management, planning and execution for the security trades, as a PWA and mobile app) was rebuilt. The shared foundation then let us create Propret and ship the platform as white-label for several customers.
 - **Modernising without breaking everything.** Symfony API 3.4 → 6.4, PHP 7.1 → 8.4, MySQL/MariaDB → PostgreSQL. A legacy project migrated to API Platform, and Vue 2 → Vue 3 (Quasar 2, Pinia, TypeScript, Capacitor).

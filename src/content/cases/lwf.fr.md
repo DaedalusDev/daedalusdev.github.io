@@ -9,7 +9,7 @@ stack: ["Symfony", "API Platform", "PostgreSQL", "Vue 3", "Quasar", "TypeScript"
 ---
 **Le défi.** Faire grandir plusieurs produits et leur base technique avec une petite équipe : le plateau technique est passé de 2 à 5 personnes, la société de 4 à 12.
 
-**Ce que j'ai porté**
+**Ce que j'ai mené**
 
 - **Un socle commun plutôt qu'un produit par client.** SEKUR (gestion, planification et exécution des métiers de la sécurité, en PWA et application mobile) a été refondu. Le socle commun a ensuite servi à créer Propret et à décliner la plateforme en marque blanche pour plusieurs clients.
 - **Moderniser sans tout casser.** API Symfony 3.4 → 6.4, PHP 7.1 → 8.4, MySQL/MariaDB → PostgreSQL. Migration d'un projet historique vers API Platform, et Vue 2 → Vue 3 (Quasar 2, Pinia, TypeScript, Capacitor).

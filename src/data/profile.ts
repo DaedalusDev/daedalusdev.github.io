@@ -27,7 +27,7 @@ export const profile: Record<Lang, Profile> = {
   fr: {
     ...shared,
     title: "Tech Lead / DevOps · Vue.js · Symfony · Kubernetes · 10 ans d'expérience",
-    hook: "Tech Lead full-stack et DevOps : j'ai porté la plateforme technique d'une société dont l'activité a été multipliée par ~15 en 6 ans.",
+    hook: "Tech Lead full-stack et DevOps : j'ai piloté la plateforme technique d'une société dont l'activité a été multipliée par ~15 en 6 ans.",
     availability: 'Disponible immédiatement',
     searching: "CDI en priorité, ouvert à une mission CDD / intérim. Nîmes et alentours, télétravail possible.",
     timeline: [
@@ -77,7 +77,7 @@ export const profile: Record<Lang, Profile> = {
   en: {
     ...shared,
     title: 'Tech Lead / DevOps · Vue.js · Symfony · Kubernetes · 10 years of experience',
-    hook: 'Full-stack and DevOps Tech Lead: I carried the technical platform of a company whose business grew ~15× in 6 years.',
+    hook: 'Full-stack and DevOps Tech Lead: I led the technical platform of a company whose business grew ~15× in 6 years.',
     availability: 'Available immediately',
     searching: 'Permanent role preferred, open to a fixed-term or interim assignment. Nîmes area (France), remote-friendly.',
     timeline: [
