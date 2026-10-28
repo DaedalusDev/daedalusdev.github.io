@@ -1,21 +1,20 @@
-MIT License
+Copyright (c) 2018-2026 Florian Saleur. Tous droits réservés.
+Copyright (c) 2018-2026 Florian Saleur. All rights reserved.
 
-Copyright (c) 2018 Florian Saleur
+Ce dépôt est public pour être consulté, pas pour être réutilisé. Sans accord
+écrit préalable de l'auteur, il est interdit de copier, modifier, redistribuer
+ou publier tout ou partie de son contenu : code du site, textes, images,
+photographie, pages d'applications, et build de SubRootine (code, sprites,
+musiques, sons).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository is public to be read, not to be reused. Without the author's
+prior written permission, copying, modifying, redistributing or publishing all
+or part of it is prohibited: site code, texts, images, photograph, application
+pages, and the SubRootine build (code, sprites, music, sounds).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Les composants tiers embarqués dans le build de SubRootine (Vue, Quasar,
+Three.js, FluidR3_GM…) restent soumis à leurs propres licences.
+Third-party components bundled in the SubRootine build (Vue, Quasar, Three.js,
+FluidR3_GM…) remain under their own licenses.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Contact : dev.daedalus@gmail.com
