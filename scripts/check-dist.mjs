@@ -125,6 +125,34 @@ const portrait = join(DIST, 'florian-saleur.webp')
 check(existsSync(portrait), 'florian-saleur.webp manquant')
 check(!existsSync(portrait) || statSync(portrait).size < 30 * 1024, 'florian-saleur.webp : plus de 30 Ko')
 
+// --- Visuels : icônes des projets, capture de SubRootine (dimensions fixes, alt, poids plafonné)
+const MAX_VISUAL = 80 * 1024
+for (const file of Object.values(PAGES)) {
+  const tags = read(file).match(/<img\b[^>]*>/g) ?? []
+  const icons = tags.filter((t) => t.includes('class="project-icon"'))
+  const shots = tags.filter((t) => t.includes('class="case-shot"'))
+  check(icons.length === 2, `${file} : il faut 2 icônes de projet (trouvé ${icons.length})`)
+  check(shots.length === 2, `${file} : il faut 2 captures de SubRootine, bureau et mobile (trouvé ${shots.length})`)
+  check(/<div class="gallery"[^>]*tabindex="0"[^>]*aria-label="[^"]{5,}"/.test(read(file)) || /<div[^>]*class="gallery"[^>]*tabindex="0"[^>]*aria-label="[^"]{5,}"/.test(read(file)), `${file} : galerie défilante focalisable absente (tabindex + aria-label)`)
+  for (const tag of [...icons, ...shots]) {
+    check(/\swidth="\d+"/.test(tag) && /\sheight="\d+"/.test(tag), `${file} : image sans dimensions fixes (${tag.slice(0, 80)})`)
+    check(/\salt="/.test(tag), `${file} : image sans attribut alt`)
+    const src = /\ssrc="([^"]+)"/.exec(tag)?.[1] ?? ''
+    check(existsSync(join(DIST, src)), `${file} : image absente du build (${src})`)
+    check(!existsSync(join(DIST, src)) || statSync(join(DIST, src)).size <= MAX_VISUAL, `${file} : ${src} dépasse 80 Ko`)
+  }
+  const appShots = tags.filter((t) => t.includes('class="project-shot"'))
+  check(appShots.length === 4, `${file} : il faut 4 captures d'applications (trouvé ${appShots.length})`)
+  for (const tag of appShots) {
+    check(/\swidth="\d+"/.test(tag) && /\sheight="\d+"/.test(tag), `${file} : capture d'app sans dimensions fixes`)
+    check(/\salt="[^"]{30,}"/.test(tag) && /\sloading="lazy"/.test(tag), `${file} : capture d'app sans alt descriptif ou sans loading=lazy`)
+    const src = /\ssrc="([^"]+)"/.exec(tag)?.[1] ?? ''
+    check(existsSync(join(DIST, src)), `${file} : capture absente du build (${src})`)
+    check(!existsSync(join(DIST, src)) || statSync(join(DIST, src)).size <= 40 * 1024, `${file} : ${src} dépasse 40 Ko`)
+  }
+  for (const tag of shots) check(/\salt="[^"]{30,}"/.test(tag) && /\sloading="lazy"/.test(tag), `${file} : capture sans alt descriptif ou sans loading=lazy`)
+}
+
 // --- Task 2 : parité FR/EN des études de cas (src/content/cases/<slug>.<lang>.md)
 const CASES = new URL('../src/content/cases/', import.meta.url).pathname
 const caseFiles = existsSync(CASES) ? readdirSync(CASES).filter((f) => f.endsWith('.md')) : []

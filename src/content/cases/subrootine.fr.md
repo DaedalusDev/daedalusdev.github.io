@@ -7,6 +7,15 @@ summary: "Reprogramme des robots dans un monde post-IA : le joueur écrit un scr
 order: 2
 stack: ["Vue 3", "Quasar", "TypeScript", "Pinia", "Vitest", "Playwright", "Three.js", "Web Audio"]
 demo: "/subrootine/"
+images:
+  - src: "/assets/img/subrootine-mobile.webp"
+    alt: "Premier niveau de SubRootine sur téléphone : la ferme en 3D en haut, et en bas un programme de trois blocs « Move » construit d'un simple toucher."
+    width: 360
+    height: 779
+  - src: "/assets/img/subrootine.webp"
+    alt: "Premier niveau de SubRootine sur ordinateur : l'éditeur de blocs à gauche, et à droite la ferme en 3D avec le robot, des caisses, des clôtures et un tracteur."
+    width: 960
+    height: 600
 ---
 Le jeu est jouable ci-dessous, directement dans le navigateur, sans serveur. Le code source est privé ; voici comment il est construit.
 

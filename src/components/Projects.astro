@@ -5,7 +5,8 @@ const { items } = Astro.props as { items: Profile['projects'] }
 <div class="projects">
   {items.map((p) => (
     <article class="project">
-      <h3>{p.name}</h3>
+      <h3><img class="project-icon" src={p.icon} alt="" width="64" height="64" loading="lazy" decoding="async" />{p.name}</h3>
+      <p class="project-shots">{p.shots.map((s) => <img class="project-shot" src={s.src} alt={s.alt} width="360" height="480" loading="lazy" decoding="async" />)}</p>
       <p>{p.summary}</p>
       <p class="stack">{p.stack.join(' · ')}</p>
       <p class="project-links">{p.links.map((l) => <a href={l.href} rel="noopener">{l.label}</a>)}</p>

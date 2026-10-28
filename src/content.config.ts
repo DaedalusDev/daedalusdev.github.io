@@ -14,6 +14,7 @@ const cases = defineCollection({
     order: z.number(),
     stack: z.array(z.string()),
     demo: z.string().optional(),
+    images: z.array(z.object({ src: z.string(), alt: z.string(), width: z.number(), height: z.number() })).default([]),
   }),
 })
 

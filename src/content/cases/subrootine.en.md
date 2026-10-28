@@ -7,6 +7,15 @@ summary: "Reprogram robots in a post-AI world: the player writes a JavaScript sc
 order: 2
 stack: ["Vue 3", "Quasar", "TypeScript", "Pinia", "Vitest", "Playwright", "Three.js", "Web Audio"]
 demo: "/subrootine/"
+images:
+  - src: "/assets/img/subrootine-mobile.webp"
+    alt: "First level of SubRootine on a phone: the 3D farm at the top, and below a three-block “Move” program built with simple taps."
+    width: 360
+    height: 779
+  - src: "/assets/img/subrootine.webp"
+    alt: "First level of SubRootine on desktop: the block editor on the left, and on the right the 3D farm with the robot, crates, fences and a tractor."
+    width: 960
+    height: 600
 ---
 The game is playable below, right in the browser, with no server. The source code is private; here is how it is built.
 

@@ -10,7 +10,7 @@ export type Profile = {
   links: { label: string; href: string }[]
   timeline: { period: string; role: string; place: string; summary: string }[]
   skills: { theme: string; items: string }[]
-  projects: { name: string; summary: string; stack: string[]; links: { label: string; href: string }[] }[]
+  projects: { name: string; icon: string; shots: { src: string; alt: string }[]; summary: string; stack: string[]; links: { label: string; href: string }[] }[]
 }
 
 const shared = {
@@ -44,6 +44,11 @@ export const profile: Record<Lang, Profile> = {
     projects: [
       {
         name: 'Champi Farm',
+        icon: '/assets/img/champi-farm-icon.webp',
+        shots: [
+          { src: '/assets/img/champi-farm-carte.webp', alt: 'Champi Farm : la carte avec le joueur, la barre de niveau et des champignons à collecter autour de lui.' },
+          { src: '/assets/img/champi-farm-collecte.webp', alt: "Champi Farm : fenêtre « Vous avez trouvé un champignon commun ! » indiquant les points d'expérience gagnés." },
+        ],
         summary: "Application Android de chasse aux champignons, en famille ou entre amis, dans l'esprit de « Pokémon Go ».",
         stack: ['Vue.js', 'Quasar', 'Cordova', 'Firebase'],
         links: [
@@ -54,6 +59,11 @@ export const profile: Record<Lang, Profile> = {
       },
       {
         name: 'Lotomatik',
+        icon: '/assets/img/lotomatic.svg',
+        shots: [
+          { src: '/assets/img/lotomatik-cartons.webp', alt: 'Lotomatik : liste de cartons de loto colorés avec leurs numéros.' },
+          { src: '/assets/img/lotomatik-tirage.webp', alt: 'Lotomatik : grille des numéros de 1 à 90 pour saisir les tirages, avec les numéros sortis en rouge.' },
+        ],
         summary: 'Application Android pour gérer ses cartons de loto.',
         stack: ['Vue.js', 'Quasar', 'Cordova', 'Capacitor'],
         links: [
@@ -84,6 +94,11 @@ export const profile: Record<Lang, Profile> = {
     projects: [
       {
         name: 'Champi Farm',
+        icon: '/assets/img/champi-farm-icon.webp',
+        shots: [
+          { src: '/assets/img/champi-farm-carte.webp', alt: 'Champi Farm: the map showing the player, the level bar and mushrooms to collect nearby.' },
+          { src: '/assets/img/champi-farm-collecte.webp', alt: 'Champi Farm: a “You found a common mushroom!” dialog showing the experience points earned.' },
+        ],
         summary: "Android mushroom-hunting app for family and friends, in the spirit of “Pokémon Go”.",
         stack: ['Vue.js', 'Quasar', 'Cordova', 'Firebase'],
         links: [
@@ -94,6 +109,11 @@ export const profile: Record<Lang, Profile> = {
       },
       {
         name: 'Lotomatik',
+        icon: '/assets/img/lotomatic.svg',
+        shots: [
+          { src: '/assets/img/lotomatik-cartons.webp', alt: 'Lotomatik: a list of colourful lotto cards with their numbers.' },
+          { src: '/assets/img/lotomatik-tirage.webp', alt: 'Lotomatik: the grid of numbers 1 to 90 used to enter draws, with drawn numbers in red.' },
+        ],
         summary: 'Android app to manage your lotto cards.',
         stack: ['Vue.js', 'Quasar', 'Cordova', 'Capacitor'],
         links: [

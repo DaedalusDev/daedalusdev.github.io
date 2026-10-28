@@ -3,13 +3,21 @@ import { render, type CollectionEntry } from 'astro:content'
 import { ui } from '../i18n'
 
 const { entry } = Astro.props as { entry: CollectionEntry<'cases'> }
-const { title, role, period, summary, stack, demo, lang } = entry.data
+const { title, role, period, summary, stack, demo, images, lang } = entry.data
 const { Content } = await render(entry)
 ---
 <article class="case">
   <h3>{title}</h3>
   <p class="meta">{role} · {period}</p>
   <p class="summary">{summary}</p>
+  {images.length > 0 && (
+    <div class="gallery" tabindex="0" role="region" aria-label={ui[lang].gallery}>
+      {images.map((img) => {
+        const shot = <img class="case-shot" src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
+        return demo ? <a href={demo}>{shot}</a> : shot
+      })}
+    </div>
+  )}
   <div class="prose"><Content /></div>
   {stack.length > 0 && <p class="stack">{stack.join(' · ')}</p>}
   {demo && <p><a class="button" href={demo}>{ui[lang].play}</a></p>}
