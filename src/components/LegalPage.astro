@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro'
+import { homePath, ui, type Lang } from '../i18n'
+import { profile } from '../data/profile'
+import type { LegalApp } from '../data/legal'
+
+interface Props { app: LegalApp; lang: Lang }
+const { app, lang } = Astro.props
+// Corps légal repris tel quel de l'ancien site (voir scripts/legal-reference/).
+const fragments = import.meta.glob('../legal/*.html', { query: '?raw', import: 'default', eager: true }) as Record<string, string>
+const body = fragments[`../legal/${app.slug}.${lang}.html`]
+const other: Lang = lang === 'fr' ? 'en' : 'fr'
+const path = (l: Lang) => (l === 'fr' ? `/${app.slug}/` : `/en/${app.slug}/`)
+const label = lang === 'fr' ? "Conditions d'utilisation et politique de confidentialité" : 'Terms & Conditions and Privacy Policy'
+---
+<Base lang={lang} title={`${app.name} — ${label}`} description={`${label} : ${app.name}.`} alternates={{ fr: path('fr'), en: path('en') }}>
+  <nav class="legal-nav" aria-label="Navigation">
+    <a href={homePath(lang)}>{profile[lang].name}</a>
+    <a href={path(other)} hreflang={other} lang={other}>{ui[lang].switchTo}</a>
+  </nav>
+  <main id="main" class="legal">
+    <h1>{app.name}</h1>
+    <img src={app.image} alt={app.name} class="legal-logo" />
+    <Fragment set:html={body} />
+  </main>
+</Base>

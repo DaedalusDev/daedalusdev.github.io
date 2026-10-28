@@ -1,0 +1,26 @@
+---
+import { homePath, ui, type Lang } from '../i18n'
+import { profile } from '../data/profile'
+
+const { lang } = Astro.props as { lang: Lang }
+const p = profile[lang]
+const other: Lang = lang === 'fr' ? 'en' : 'fr'
+---
+<header class="hero">
+  <nav class="lang" aria-label="Language">
+    <a href={homePath(other)} hreflang={other} lang={other}>{ui[lang].switchTo}</a>
+  </nav>
+  <div class="identity">
+    <img class="portrait" src="/florian-saleur.webp" alt={p.name} width="96" height="96" decoding="async" />
+    <div>
+      <h1>{p.name}</h1>
+      <p class="title">{p.title}</p>
+    </div>
+  </div>
+  <p class="hook">{p.hook}</p>
+  <p class="status"><strong>{p.availability}</strong> · {p.searching}</p>
+  <p class="contact">
+    <a class="button" href={`mailto:${p.email}`}>{p.email}</a>
+    {p.links.map((l) => <a href={l.href} rel="me noopener">{l.label}</a>)}
+  </p>
+</header>

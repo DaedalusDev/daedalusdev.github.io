@@ -1,0 +1,1 @@
+import{M as e,k as t}from"./vue.runtime.esm-bundler-D3SDjdD7.js";import{Un as n}from"./index-Dy0zxvte.js";function r(){let r=n();e(()=>{r.setAudioSilencedByTool(!0)}),t(()=>{r.setAudioSilencedByTool(!1)})}export{r as t};

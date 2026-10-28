@@ -1,0 +1,7 @@
+---
+import type { Profile } from '../data/profile'
+const { items } = Astro.props as { items: Profile['skills'] }
+---
+<dl class="skills">
+  {items.map((s) => (<><dt>{s.theme}</dt><dd>{s.items}</dd></>))}
+</dl>

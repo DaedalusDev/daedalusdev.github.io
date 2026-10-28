@@ -1,0 +1,8 @@
+---
+import { ui, type Lang } from '../i18n'
+const { lang } = Astro.props as { lang: Lang }
+const updated = new Date().toISOString().slice(0, 10)
+---
+<footer class="foot">
+  <p>{ui[lang].updated} {updated}</p>
+</footer>

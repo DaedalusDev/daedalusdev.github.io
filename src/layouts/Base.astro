@@ -1,0 +1,37 @@
+---
+import { LANGS, type Lang } from '../i18n'
+import '../styles/global.css'
+
+interface Props {
+  lang: Lang
+  title: string
+  description: string
+  // chemin absolu de la même page dans chaque langue, ex. { fr: '/', en: '/en/' }
+  alternates: Record<Lang, string>
+}
+const { lang, title, description, alternates } = Astro.props
+const canonical = new URL(Astro.url.pathname, Astro.site).href
+const abs = (path: string) => new URL(path, Astro.site).href
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(alternates[l])} />)}
+    <link rel="alternate" hreflang="x-default" href={abs(alternates.fr)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_FR' : 'en_US'} />
+    <meta name="theme-color" content="#1a5f7a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,14 @@
+---
+import type { Profile } from '../data/profile'
+const { items } = Astro.props as { items: Profile['projects'] }
+---
+<div class="projects">
+  {items.map((p) => (
+    <article class="project">
+      <h3>{p.name}</h3>
+      <p>{p.summary}</p>
+      <p class="stack">{p.stack.join(' · ')}</p>
+      <p class="project-links">{p.links.map((l) => <a href={l.href} rel="noopener">{l.label}</a>)}</p>
+    </article>
+  ))}
+</div>

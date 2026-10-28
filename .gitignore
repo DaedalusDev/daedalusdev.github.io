@@ -58,4 +58,7 @@ typings/
 .env
 
 #Idea's files
-.idea
+.ideanode_modules
+dist
+.astro
+scripts/forbidden.local.txt

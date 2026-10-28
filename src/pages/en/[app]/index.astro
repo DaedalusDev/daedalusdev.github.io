@@ -1,0 +1,8 @@
+---
+import LegalPage from '../../../components/LegalPage.astro'
+import { legalApps } from '../../../data/legal'
+
+export const getStaticPaths = () => legalApps.map((app) => ({ params: { app: app.slug }, props: { app } }))
+const { app } = Astro.props
+---
+<LegalPage app={app} lang="en" />

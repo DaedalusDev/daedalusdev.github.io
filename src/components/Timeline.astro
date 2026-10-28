@@ -1,0 +1,12 @@
+---
+import type { Profile } from '../data/profile'
+const { items } = Astro.props as { items: Profile['timeline'] }
+---
+<ul class="timeline">
+  {items.map((i) => (
+    <li>
+      <p class="meta">{i.period} · {i.role} · {i.place}</p>
+      <p>{i.summary}</p>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,1 @@
+import{Ft as e}from"./sim-host-Be882gNM.js";function t(t){let n=Math.max(0,Math.floor(t)),r=Math.floor(n/e)+1,i=n%e,a=Math.floor(i/60),o=i%60,s=e=>String(e).padStart(2,`0`);return{day:r,hour:a,minute:o,label:`${s(a)}:${s(o)}`,total:n}}export{t};

@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import Header from './Header.astro'
+import CaseCard from './CaseCard.astro'
+import Projects from './Projects.astro'
+import Timeline from './Timeline.astro'
+import Skills from './Skills.astro'
+import Footer from './Footer.astro'
+import { ui, type Lang } from '../i18n'
+import { profile } from '../data/profile'
+
+const { lang } = Astro.props as { lang: Lang }
+const p = profile[lang]
+const cases = (await getCollection('cases', (c) => c.data.lang === lang)).sort((a, b) => a.data.order - b.data.order)
+---
+<Base lang={lang} title={`${p.name} — ${p.title}`} description={p.hook} alternates={{ fr: '/', en: '/en/' }}>
+  <a class="skip" href="#main">{ui[lang].skip}</a>
+  <Header lang={lang} />
+  <main id="main">
+    <section aria-labelledby="work">
+      <h2 id="work">{ui[lang].work}</h2>
+      {cases.map((entry) => <CaseCard entry={entry} />)}
+    </section>
+    {p.projects.length > 0 && (
+      <section aria-labelledby="projects"><h2 id="projects">{ui[lang].projects}</h2><Projects items={p.projects} /></section>
+    )}
+    {p.timeline.length > 0 && (
+      <section aria-labelledby="timeline"><h2 id="timeline">{ui[lang].timeline}</h2><Timeline items={p.timeline} /></section>
+    )}
+    {p.skills.length > 0 && (
+      <section aria-labelledby="skills"><h2 id="skills">{ui[lang].skills}</h2><Skills items={p.skills} /></section>
+    )}
+  </main>
+  <Footer lang={lang} />
+</Base>
